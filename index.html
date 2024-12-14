@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Participation - Your Voice Matters</title>
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+ <!-- Custom Styles for Interactive Effects and Alignment -->
+ <style>
+    /* General Layout Adjustments */
+    body {
+    font-family: 'Poppins', sans-serif;
+   
+    background-image: url('/assets/images/main_bg.jpg'); /* Replace with your image path */
+    background-size: cover; /* Makes the image cover the entire page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+.header {
+    background-color: #fd018c;
+    color: rgb(238, 233, 233);
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.header-content .btn-outline {
+    padding: 10px 20px;
+    border: 2px solid #f8069b;
+    background-color: transparent;
+    color: #f36304;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.header-content .btn-outline:hover {
+    background-color: #ff0077;
+    color: rgb(5, 213, 250);
+}
+
+/* Section Alignment */
+.section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.featured .container {
+    margin-bottom: 40px;
+}
+
+.featured i {
+    font-size: 50px;
+    color: #fd048d;
+    margin-bottom: 15px;
+}
+
+/* FAQ Section */
+.faq-content li {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.faq-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #5f1b1b;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    width: 2900px;
+    padding: 20px;
+    background-color: #facd03;
+    color: rgb(17, 8, 8);
+    margin-top: 0px;
+}
+
+/* Charts */
+.chart-container {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    background-color: #078d29;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f8aa00;
+}
+
+/* Section and container for content */
+.section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container-featured {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between the content boxes */
+    flex-wrap: wrap;
+}
+
+.content-box {
+    width: 300px; /* Adjust this as necessary */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+    transform: translateY(-10px); /* Hover effect for lifting up */
+}
+
+.content-box i {
+    font-size: 40px;
+    color: #ee0a8f;
+    margin-bottom: 20px;
+}
+
+.content-box h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #030203;
+}
+
+.content-box p {
+    font-size: 1rem;
+    color: #130c0c;
+    line-height: 1.5;
+}
+
+/* Styling for the nav bar */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #ffc400;
+}
+
+.nav-bar .logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .logo img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.nav-bar .nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar .nav a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-bar .nav a:hover {
+    color: #f80693; /* Light color for hover */
+}
+
+.nav-bar .nav-cta {
+    padding: 10px 20px;
+    background-color: #07d8e7;
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar .nav-cta:hover {
+    background-color: #39285b;
+}
+
+.nav-bar .nav-cta-outline {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #dcd4ec;
+    border: 2px solid #dcd4ec;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-bar .nav-cta-outline:hover {
+    background-color: #dcd4ec;
+    color: #f80289;
+}
+
+</style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="nav-bar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo copy.png" alt="">
+                    Citizen Engagement
+                </a>
+                <div class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="index.html">FAQ</a>
+                    <a href="php_includes/login.php" class="nav-cta">Login</a>
+                    <a href="php_includes/register.php" class="nav-cta-outline">Register</a>
+                </div>
+            </div>
+            <div class="header-content main">
+                <h1>Citizen Engagement <br>Your Voice. Your Community. Your Future</h1>
+                <p>Join the movement to transform your neighborhood. Collaborate with others, offer insights, and take action to create positive change where you live.</p>
+                <br><br>
+                <a href="php_includes/login.php" class="btn-outline">Get Started</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container-featured">
+                <div class="content-box">
+                    <i class="fa fa-lightbulb circle"></i>
+                    <h2>Shape the Future with Your Ideas</h2>
+                    <p>Got an idea to improve our community or thoughts on current initiatives? Your voice matters and can help drive impactful change.</p>
+                </div>
+                <div class="section">
+                    <div class="container-featured">
+                        <div class="content-box">
+                            <i class="fa fa-check-circle circle"></i>
+                            <h2>Get Involved in Local Decisions</h2>
+                            <p>Your opinion counts! Advocate for or against community projects and help influence the direction of our neighborhood's growth.</p>
+                        </div>
+                        <div class="content-box">
+                            <i class="fa fa-handshake circle"></i>
+                            <h2>Join Community Discussions & Share Your Concerns</h2>
+                            <p>Be part of conversations that matter. Raise issues that impact you and your neighbors, and work together to foster meaningful improvements.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            
+
+        <div class="section stats">
+            <h2>The Difference We’ve Made Together</h2>
+            <p>Your engagement powers Citizen Engagement, Discover how your contributions have helped drive progress and shape a better community for all</p>
+            <div class="charts">
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="section faq">
+            <div class="container">
+                <h2>Common Questions</h2>
+                <ol class="faq-content">
+                    <h3><li>How Do I Get Involved?</li></h3>
+                    <p>Getting involved is simple! Create an account, browse ongoing initiatives, and share your thoughts or suggestions. Your voice matters, and we’re here to ensure it's heard.</p>
+
+                    <h3><li>What Happens to My Feedback?</li></h3>
+                    <p>Your feedback plays a crucial role in shaping community projects. We value your input and collaborate with local leaders to address your ideas and concerns.</p>
+
+                    <h3><li>Who Runs This Platform?</li></h3>
+                    <p>Citizen Engagement is a joint initiative between local citizens and government, designed to promote open, transparent, and inclusive decision-making.</p>
+                </ol>
+            </div>
+        </div>
+
+        <div class="section cta">
+            <a href="php_includes/login.php" class="btn">Get Involved</a>
+        </div>
+
+        <div class="footer container">
+            <p>Copyright &copy; 2024 Citizen Central All Rights Reserved Designed and Maintained by Raphael Chinjamba, SIN: 2109260887</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Fetch data from the PHP script
+        fetch('php_includes/fetch.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error(data.error);
+                    return;
+                }
+
+                // Pie Chart, Line Chart, Bar Chart generation logic
+                const pieData = {
+                    labels: ['Projects Completed', 'Projects In-progress'],
+                    datasets: [{
+                        data: [data.projects.completedProjects, data.projects.ongoingProjects],
+                        backgroundColor: ['#6e5796', '#dcd4ec'],
+                    }]
+                };
+
+                const lineData = {
+                    labels: data.engagement.map(item => item.month),
+                    datasets: [{
+                        label: 'User Engagement',
+                        data: data.engagement.map(item => item.engagementCount),
+                        fill: false,
+                        borderColor: '#39285b',
+                    }]
+                };
+
+                const barData = {
+                    labels: data.roles.map(item => item.role),
+                    datasets: [{
+                        label: 'Number of Users',
+                        data: data.roles.map(item => item.count),
+                        backgroundColor: '#dcd4ec',
+                        borderColor: '#6f4eb0',
+                    }]
+                };
+
+                // Create charts
+                new Chart(document.getElementById('pieChart').getContext('2d'), { type: 'pie', data: pieData });
+                new Chart(document.getElementById('lineChart').getContext('2d'), { type: 'line', data: lineData });
+                new Chart(document.getElementById('barChart').getContext('2d'), { type: 'bar', data: barData });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>
